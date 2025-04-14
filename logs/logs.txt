@@ -1,0 +1,17 @@
+2025-04-14 21:33:39,875 - INFO - Starting from last page: 1
+2025-04-14 21:33:41,304 - ERROR - Failed to post player Knuupy to API. Status Code: 200
+2025-04-14 21:33:48,566 - ERROR - Failed to post player Knuupy to API. Status Code: 429
+2025-04-14 21:33:55,805 - ERROR - Failed to post player Knuupy to API. Status Code: 429
+2025-04-14 21:33:55,805 - ERROR - An error occurred: RetryError[<Future at 0x102b223f0 state=finished raised RequestException>].
+ Failed at page: 1, extracted 0 players.
+2025-04-14 21:33:55,805 - INFO - Saved failed players to data/failed_players.json
+2025-04-14 21:33:55,806 - INFO - Failed players: {'last_page': 1}
+2025-04-14 21:33:55,806 - INFO - Saved state to data/failed_players.json.
+2025-04-14 21:44:11,342 - INFO - Starting from last page: 1
+2025-04-14 21:44:13,173 - ERROR - An error occurred: name 'resp' is not defined.
+ Failed at page: 1, extracted 0 players.
+2025-04-14 21:44:13,174 - INFO - Saved failed players to data/failed_players.json
+2025-04-14 21:44:13,174 - INFO - Failed players: {'last_page': 1}
+2025-04-14 21:44:13,175 - INFO - Saved state to data/failed_players.json.
+2025-04-14 21:44:24,767 - INFO - Starting from last page: 1
+2025-04-14 21:44:59,678 - INFO - Posted player Knuupy to API.
