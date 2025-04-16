@@ -92,6 +92,7 @@ def main():
                 break
 
             for name in names:
+                time.sleep(3)
                 post_player_to_api(name)
                 total_players += 1
                 logging.info(f"Posted player {name} to API.")
