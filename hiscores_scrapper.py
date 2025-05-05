@@ -6,7 +6,7 @@ import time
 from tenacity import retry, stop_after_attempt, wait_fixed, retry_if_exception_type
 import json
 
-# force commit 3
+# force commit 4
 
 BASE_URL = "https://secure.runescape.com/m=hiscore_oldschool_seasonal/a=13/overall?category_type=1&table=0&page={}"
 API_URL = "https://api.wiseoldman.net/v2/players/{}"
