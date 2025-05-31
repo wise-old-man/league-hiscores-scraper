@@ -9,6 +9,8 @@ venv/
 # Ignore IDE configuration files (optional)
 .vscode/
 .idea/
+logs/
+data/
 
 # Ignore environment variables
 .env
