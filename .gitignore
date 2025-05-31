@@ -11,6 +11,7 @@ venv/
 .idea/
 logs/
 data/
+logs.txt
 
 # Ignore environment variables
 .env
