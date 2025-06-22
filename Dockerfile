@@ -8,9 +8,9 @@ RUN mkdir -p /app/logs
 VOLUME ["/app/data", "/app/logs"]
 
 COPY requirements.txt .
-COPY hiscores_scrapper.py .
+COPY get_leagues_ranking.py .
 
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python3", "hiscores_scrapper.py"]
+CMD ["python3", "get_leagues_ranking.py"]
