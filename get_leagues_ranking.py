@@ -31,9 +31,6 @@ def post_player_to_api(name):
     encoded_name = requests.utils.quote(name)
     resp = requests.post(WOM_API_URL.format(encoded_name), headers=HEADERS)
     if resp.status_code not in SUCCESS_RESP:
-        logging.error(
-            f"Failed to post player {name} to API. Status Code: {resp.status_code}"
-        )
         raise requests.RequestException(
             f"Failed to post player {name} to API. Status Code: {resp.status_code}"
         )
@@ -57,8 +54,11 @@ def main():
                 raise ValueError(f"No more players found at rank {curr_rank}.")
 
             for player in players:
-                post_player_to_api(player.get("name"))
-                time.sleep(3)
+                try:
+                    post_player_to_api(player.get("name"))
+                    time.sleep(3)
+                except:
+                    logging.warn(f"Failed to post the player: {player.get("name")}")
 
             curr_rank += 50
         logging.info(f"Processed up to rank {curr_rank}.")
