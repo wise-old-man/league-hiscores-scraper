@@ -56,7 +56,7 @@ def main():
             for player in players:
                 try:
                     post_player_to_api(player.get("name"))
-                    time.sleep(3)
+                    time.sleep(1)
                 except:
                     logging.warn(f"Failed to post the player: {player.get("name")}")
 
