@@ -72,11 +72,12 @@ def main():
             for player in players:
                 try:
                     post_player_to_api(player.get("name"))
-                    time.sleep(1)
+                    time.sleep(0.5)
                 except:
                     logging.warning(f"Failed to post the player: {player.get('name')}")
             save_curr_rank(curr_rank)
-            logging.info(f"Processed rank page: {curr_rank}.")
+            if curr_rank % 1000 == 0:
+                logging.info(f"Processed rank page: {curr_rank}.")
             curr_rank += 50
     except Exception as e:
         logging.error(f"An error occurred: {e}")
