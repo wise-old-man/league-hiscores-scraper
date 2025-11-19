@@ -273,6 +273,7 @@ SKILLS: t.Final[t.List[Metric]] = [
     Metric("Runecrafting", 21, 0),  # This is for you Ruben
     Metric("Hunter", 22, 0),
     Metric("Construction", 23, 0),
+    Metric("Sailing", 24, 0),
 ]
 
 ACTIVITIES: t.Final[t.List[Metric]] = [
@@ -384,7 +385,7 @@ else:
     )
 
 NOT_ALL_METRICS: t.Final[t.List[Metric]] = [
-  Metric("Attack", 1, 0) # TODO: Change this to sailing when it is released
+  Metric("Sailing", 24, 0)
 ]
 
 #########################################################
