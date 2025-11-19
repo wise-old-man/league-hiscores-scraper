@@ -385,7 +385,7 @@ else:
     )
 
 NOT_ALL_METRICS: t.Final[t.List[Metric]] = [
-  Metric("Attack", 1, 0) # TODO: Change this to sailing when it is released
+  Metric("Sailing", 24, 0)
 ]
 
 #########################################################
