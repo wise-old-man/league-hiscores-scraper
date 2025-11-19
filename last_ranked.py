@@ -35,7 +35,7 @@ async def binary_search(session: ClientSession, metric: Metric, low: int = 0, hi
         board = await fetch_hiscore_players(session, metric, mid)
 
         # If the fetch didn't result in a 404
-        if board:
+        if board[0].rank != 1:
             last_player = board[-1]
             _low = mid + 1
 
@@ -59,12 +59,13 @@ async def new_bounds(session: ClientSession, metric: Metric, low: int) -> t.Tupl
     while True:
         board = await fetch_hiscore_players(session, metric, new_high)
 
-        if not board:
+        if board[0].rank == 1:
             return (new_low, new_high)
         else:
             new_high += RANK_SKIP
             new_low += RANK_SKIP
 
+        await asyncio.sleep(DELAY)
 
 async def find_last_players(session: ClientSession) -> t.List[HiscorePlayer]:
     if (Path(LAST_RANKS_FILE).is_file()):
